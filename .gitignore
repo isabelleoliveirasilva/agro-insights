@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente (nunca versionar segredos)
+.env
+
+# Testes e linters
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Dados gerados (mantém só as pastas)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# Relatórios gerados
+reports_output/
+*.xlsx
+!dashboards/*.xlsx
+
+# Power BI: arquivos temporários
+*.pbix.tmp
+.~lock.*
+
+# IDEs e SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

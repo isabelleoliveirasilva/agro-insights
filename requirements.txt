@@ -1,0 +1,8 @@
+# Runtime
+Flask~=3.0
+requests~=2.32
+pandas~=2.2
+SQLAlchemy~=2.0
+openpyxl~=3.1
+XlsxWriter~=3.2
+python-dotenv~=1.0
