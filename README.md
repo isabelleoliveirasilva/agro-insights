@@ -32,6 +32,51 @@ flowchart LR
     R --> P[Dashboard Power BI]
 ```
 
+## Modelo de dados
+
+```mermaid
+erDiagram
+    ESTADOS ||--o{ VENDAS : "registra"
+    ESTADOS ||--o{ PRODUCAO : "produz"
+    ESTADOS ||--o{ CLIMA : "mede"
+    PRODUTOS ||--o{ VENDAS : "é vendido em"
+
+    ESTADOS {
+        text uf PK
+        text nome
+        text regiao
+    }
+    PRODUTOS {
+        integer id PK
+        text nome
+        text categoria
+        text cultura_alvo
+        real preco
+    }
+    VENDAS {
+        integer id PK
+        date data_venda
+        integer produto_id FK
+        text uf FK
+        integer quantidade
+        real valor_total
+    }
+    PRODUCAO {
+        integer ano PK
+        text uf PK, FK
+        text cultura PK
+        real area_colhida_ha
+        real quantidade_t
+        real valor_mil_reais
+    }
+    CLIMA {
+        date data_leitura PK
+        text uf PK, FK
+        real temperatura_media
+        real precipitacao_mm
+    }
+```
+
 ## 🧰 Stack
 
 | Camada | Tecnologia |
